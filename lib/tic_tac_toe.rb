@@ -23,8 +23,8 @@ def display_board
   puts " #{@board[6]} | #{@board[7]} | #{@board[8]} "
 end
 
-def input_to_index(user_input)
-  user_input.to_i - 1
+def input_to_index(input)
+  input.to_i - 1
 end
 
 def move(index, current_player = "X")
@@ -62,8 +62,8 @@ end
 
 def turn
   puts "Please choose a number 1-9:"
-  user_input = gets.chomp
-  index = input_to_index(user_input)
+  input = gets.chomp
+  index = input_to_index(input)
   if valid_move?(index)
     player_token = current_player
     move(index, player_token)
