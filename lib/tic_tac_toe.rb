@@ -72,7 +72,7 @@ end
   
 
   def full?
-    !@board.any?{|occupy| occupy != " "}
+    @board.any?{|occupy| occupy != " "}
   end
   
   def draw?
