@@ -98,10 +98,9 @@ end
   
   
 def play
-  until over? == true
+  while over? == false
     turn
   end
-
   if won?
     puts "Congratulations #{winner}!"
   elsif draw?
